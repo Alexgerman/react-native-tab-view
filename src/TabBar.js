@@ -227,7 +227,7 @@ export default class TabBar<T: *> extends React.Component<Props<T>, State> {
 
   _renderIndicator = (props: IndicatorProps<T>) => {
     if (typeof this.props.renderIndicator !== 'undefined') {
-      return this.props.renderIndicator(props);
+      return this.props.renderIndicator(props, this.state);
     }
 
     const { position, navigationState, width } = props;
